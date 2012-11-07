@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Title</th>
     <th>Content</th>
+    <th>Theme</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= post.name %></td>
     <td><%= post.title %></td>
     <td><%= post.content %></td>
+    <td><%= post.theme.title %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
@@ -25,10 +27,6 @@
 <br />
 
 <%= link_to 'New Post', new_post_path %>
-
-<br />
-
-<%= link_to 'Play with Themes', themes_path %>
 
 <br />
 

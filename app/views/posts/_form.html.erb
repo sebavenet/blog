@@ -27,6 +27,11 @@
   <h2>Tags</h2>
   <%= render :partial => 'tags/form',
              :locals => {:form => post_form} %>
+  <h2>Theme</h2>
+  <div class="field">
+    <%= post_form.label :theme %><br />
+    <%= post_form.select(:theme_id,  Theme.all.map {|u| [u.title,u.id]}, {:include_blank => true}) %>
+  </div>
   <div class="actions">
     <%= post_form.submit %>
   </div>

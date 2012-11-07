@@ -7,7 +7,5 @@ class CreateTags < ActiveRecord::Migration
       t.timestamps
     end
     add_index :tags, :post_id
-
-    drop_table :themes
   end
 end
