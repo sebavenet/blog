@@ -1,4 +1,4 @@
-<h1>Great blogposts</h1>
+<h1>Blog posts</h1>
 
 <table>
   <tr>
@@ -6,6 +6,9 @@
     <th>Title</th>
     <th>Content</th>
     <th>Theme</th>
+    <th>Creation date</th>
+    <th>Update date</th>
+    <th>Author</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +20,9 @@
     <td><%= post.title %></td>
     <td><%= post.content %></td>
     <td><%= post.theme.title %></td>
+    <td><%= post.created_at %></td>
+    <td><%= post.updated_at %></td>
+    <td><%= post.user.login %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
@@ -25,9 +31,6 @@
 </table>
 
 <br />
-
 <%= link_to 'New Post', new_post_path %>
-
 <br />
-
-<%= link_to 'Accueil', '/'  %>
+<%= link_to 'Home', '/'  %>
